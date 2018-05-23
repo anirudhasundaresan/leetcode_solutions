@@ -7,7 +7,7 @@ Example:
 Input: "Hello World"
 Output: 5
 
-## My Python code ##
+## My Python3 code ##
 
 class Solution:
     def lengthOfLastWord(self, s):
