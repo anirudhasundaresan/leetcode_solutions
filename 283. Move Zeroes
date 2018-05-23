@@ -18,9 +18,7 @@ class Solution(object):
         lis = [1 for i in nums if i==0]
         for i in range(sum(lis)):
             nums.remove(0)
-            #nums.append(0) # it removes 0 from the start of the list...so this is fine, but slower! 
-        for i in range(sum(lis)):
-            nums.append(0)
+            nums.append(0) # it removes 0 from the start of the list...so this is fine 
             
         """
         :type nums: List[int]
