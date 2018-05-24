@@ -44,6 +44,7 @@ class Solution:
         """
         
 [** Runs a bit slower, but smaller code**]
+[*** Removing the if conditions adds in ~15ms more..***]
 class Solution:
     def rotate(self, nums, k):
         if k!=0:
