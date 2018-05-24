@@ -43,3 +43,16 @@ class Solution:
         :rtype: void Do not return anything, modify nums in-place instead.
         """
         
+[** Runs a bit slower, but smaller code**]
+class Solution:
+    def rotate(self, nums, k):
+        if k!=0:
+            for i in range(k):
+                temp = nums[-1]
+                del nums[-1]
+                nums.insert(0,temp)  #nums = [temp] + nums does not work :/ Why?
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: void Do not return anything, modify nums in-place instead.
+        """
