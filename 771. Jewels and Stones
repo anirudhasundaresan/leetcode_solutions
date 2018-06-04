@@ -37,7 +37,7 @@ class Solution:
         for i in J:
             while i in S:
                 count += 1
-                S = S.replace(i, "", 1)
+                S = S.replace(i, "", 1) #str.replace(old, new[, max]) --- means replace old substring with new substring with max no. of counts replaced. 
             #print(S)
         return count
         """
