@@ -12,6 +12,8 @@ Note:
 The boundaries of each input argument are 1 <= left <= right <= 10000.
 
 ## My Python3 code ## (intermediate conversion to string might delay...always better to check conditions with int itself)
+## The // does integer division by a power of ten to move the digit to the ones position, then the % gets the remainder after division by 10.
+
 class Solution:
     def selfDividingNumbers(self, left, right):
         ls = []
