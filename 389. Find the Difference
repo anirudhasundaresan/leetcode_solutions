@@ -15,6 +15,7 @@ Explanation:
 'e' is the letter that was added.
 
 ## My Python3 code ## [Best: return list(collections.Counter(t) - collections.Counter(s))[0]]
+## Verified this later: Be careful with Counter subtractions..s-t would give you [] for the list
 
 class Solution:
     def findTheDifference(self, s, t):
