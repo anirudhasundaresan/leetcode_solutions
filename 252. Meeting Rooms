@@ -40,3 +40,5 @@ class Solution:  ### Best solution has done start end comparison.
         :rtype: bool
         """
         
+## Also, instead of creating a new function, it would be better to use lambda function.
+## intervals.sort(key = lambda x: x.start)
