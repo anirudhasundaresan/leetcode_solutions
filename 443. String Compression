@@ -44,7 +44,7 @@ Note:
 All characters have an ASCII value in [35, 126].
 1 <= len(chars) <= 1000.
 
-## My Python3 code ##
+## My Python3 code ## (Mine is not a good solution..)
 class Solution:
     def compress(self, chars):
         i=0
