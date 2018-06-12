@@ -12,7 +12,7 @@ Input: sum("ap"), Output: 3
 Input: insert("app", 2), Output: Null
 Input: sum("ap"), Output: 5
 
-## My Python3 code ##
+## My Python3 code ## [Naturally this must make you think of dictionaries, not 2 separate lists..]
 class MapSum(object):
 
     def __init__(self):
