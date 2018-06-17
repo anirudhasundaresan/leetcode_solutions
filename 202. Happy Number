@@ -14,6 +14,7 @@ Explanation:
 12 + 02 + 02 = 1
 
 ## My Python3 code ##
+# Here, an non-general approach would be to use the set int loop[8] = {4,16,37,58,89,145,42,20}; since all un-happy numbers apparently fall in this range.
 class Solution:
     def isHappy(self, n):
         new_n = list(str(n)) # str(n) is enough since we are using for i in new_n...
