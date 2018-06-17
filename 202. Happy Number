@@ -18,7 +18,7 @@ class Solution:
     def isHappy(self, n):
         new_n = list(str(n)) # str(n) is enough since we are using for i in new_n...
         # Also, many solutions have used set instead of list because 'in' operation in set is avg: O(1), whereas for list, it is O(n) on an avg.
-        lis = []
+        lis = [] # lis = set() and NOT lis = ()
         lis.append(n)
         if n==1:
             return True
