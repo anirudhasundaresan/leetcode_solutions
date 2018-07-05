@@ -16,8 +16,10 @@ Your algorithm should run in linear runtime complexity. Could you implement it u
 
 
 
-## My Python3 code ##
-class Solution: # (From SO) But the fact that it documents that dicts are hash tables implies pretty strongly that key in d, d[key], and d.get(key) are all going to be O(1).
+## My Python3 code ## (Best answer: return int((1+len(nums))*len(nums)/2-sum(nums))) [sum of all nums - what should have been the sum] 
+
+class Solution: 
+# (From SO) But the fact that it documents that dicts are hash tables implies pretty strongly that key in d, d[key], and d.get(key) are all going to be O(1).
     def missingNumber(self, nums):
         largest = max(nums)
         dic={}
@@ -26,6 +28,7 @@ class Solution: # (From SO) But the fact that it documents that dicts are hash t
         for i in range(largest+2):
             if i not in dic:
                 return i 
+                
         ''' (TLE)
     def missingNumber(self, nums):
         largest = max(nums)
