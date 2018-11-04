@@ -24,6 +24,8 @@ Coud you solve it without converting the integer to a string?
 
 ## My Python3 code ##
 '''
+'''
+'''
 class Solution:
     def isPalindrome(self, x):
         x = str(x)
