@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Implement strStr().
 
 Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
@@ -19,6 +20,7 @@ What should we return when needle is an empty string? This is a great question t
 For the purpose of this problem, we will return 0 when needle is an empty string. This is consistent to C's strstr() and Java's indexOf().
 
 ## My Python3 code ##
+'''
 class Solution:
     def strStr(self, haystack, needle):
         if needle=='':

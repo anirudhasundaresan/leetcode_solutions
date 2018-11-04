@@ -1,10 +1,12 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Given a linked list, determine if it has a cycle in it.
 Follow up:
 Can you solve it without using extra space?
 
 ## My Python code ##
+'''
 
 # Definition for singly-linked list.
 # class ListNode(object):

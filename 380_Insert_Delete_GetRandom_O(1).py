@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Design a data structure that supports all following operations in average O(1) time.
 
 insert(val): Inserts an item val to the set if not already present.
@@ -33,6 +34,7 @@ randomSet.insert(2);
 randomSet.getRandom();
 
 ## My Python3 code ##
+'''
 class RandomizedSet:
 
     def __init__(self):

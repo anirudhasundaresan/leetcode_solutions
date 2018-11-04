@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Given a non negative integer number num. For every numbers i in the range 0 ≤ i ≤ num calculate the number of 1's in their binary representation and return them as an array.
 
 Example:
@@ -12,6 +13,7 @@ Follow up:
     Can you do it like a boss? Do it without using any builtin function like __builtin_popcount in c++ or in any other language.
 
 ## My Python3 code ##
+'''
 class Solution:
     def countBits(self, num):
         lis = []

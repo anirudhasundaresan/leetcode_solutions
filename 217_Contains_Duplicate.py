@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Given an array of integers, find if the array contains any duplicates.
 
 Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
@@ -19,6 +20,7 @@ Output: true
 
 
 ## My Python3 code ##
+'''
 
 class Solution:
     def containsDuplicate(self, nums):

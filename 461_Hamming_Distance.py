@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 
 The Hamming distance between two integers is the number of positions at which the corresponding bits are different.
 Given two integers x and y, calculate the Hamming distance.
@@ -17,6 +18,7 @@ Explanation:
 The above arrows point to positions where the corresponding bits are different.
 
 ## My Python3 code ##
+'''
 
 class Solution:
     def hammingDistance(self, x, y):

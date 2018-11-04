@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 
 A sentence S is given, composed of words separated by spaces. Each word consists of lowercase and uppercase letters only.
 We would like to convert the sentence to "Goat Latin" (a made-up language similar to Pig Latin.)
@@ -25,6 +26,7 @@ S contains only uppercase, lowercase and spaces. Exactly one space between each 
 1 <= S.length <= 150.
 
 ## My Python3 code ##
+'''
 class Solution:
     def toGoatLatin(self, S):
         S = S.split(' ')

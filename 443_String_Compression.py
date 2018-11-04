@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Given an array of characters, compress it in-place.
 
 The length after compression must always be smaller than or equal to the original array.
@@ -46,6 +47,7 @@ All characters have an ASCII value in [35, 126].
 1 <= len(chars) <= 1000.
 
 ## My Python3 code ## (Mine is not a good solution..)
+'''
 class Solution:
     def compress(self, chars):
         i=0

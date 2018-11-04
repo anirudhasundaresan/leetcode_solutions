@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Write a program to find the node at which the intersection of two singly linked lists begins.
 For example, the following two linked lists:
 
@@ -18,6 +19,7 @@ You may assume there are no cycles anywhere in the entire linked structure.
 Your code should preferably run in O(n) time and use only O(1) memory.
 
 ## My Python code ##
+'''
 
 # Definition for singly-linked list.
 # class ListNode(object):

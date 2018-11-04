@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.
 You should preserve the original relative order of the nodes in each of the two partitions.
 Example:
@@ -10,6 +11,7 @@ Output: 1->2->2->4->3->5
 
 
 ## My Python code ##
+'''
 
 # Definition for singly-linked list.
 # class ListNode(object):

@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 
 Initially, there is a Robot at position (0, 0). Given a sequence of its moves, judge if this robot makes a circle, which means it moves back to the original place.
 
@@ -13,6 +14,7 @@ Input: "LL"
 Output: false
 
 ## My Python3 code ##
+'''
 
 class Solution:
     def judgeCircle(self, moves):

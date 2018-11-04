@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Given a positive integer, output its complement number. The complement strategy is to flip the bits of its binary representation.
 
 Note:
@@ -15,6 +16,7 @@ Output: 0
 Explanation: The binary representation of 1 is 1 (no leading zero bits), and its complement is 0. So you need to output 0.
 
 ## My Python3 code ##
+'''
 class Solution:
     def findComplement(self, num):
         stra = bin(num)[2:]

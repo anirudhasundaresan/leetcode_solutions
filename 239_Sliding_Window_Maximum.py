@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position. Return the max sliding window.
 
 Example:
@@ -23,6 +24,7 @@ Follow up:
 Could you solve it in linear time?
 
 ## My Python3 code ## Not exacltly linear time since I am splicing..
+'''
 class Solution:
     def maxSlidingWindow(self, nums, k):
         # need to get sublists first 

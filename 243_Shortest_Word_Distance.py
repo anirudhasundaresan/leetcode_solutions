@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Given a list of words and two words word1 and word2, return the shortest distance between these two words in the list.
 
 Example:
@@ -16,6 +17,7 @@ You may assume that word1 does not equal to word2, and word1 and word2 are both 
 
 
 ## My Python3 code ##
+'''
 
 import numpy as np 
 class Solution:

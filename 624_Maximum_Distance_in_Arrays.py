@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
  Given m arrays, and each array is sorted in ascending order. Now you can pick up two integers from two different arrays (each array picks one) and calculate the distance. We define the distance between two integers a and b to be their absolute difference |a-b|. Your task is to find the maximum distance.
 
 Example 1:
@@ -19,6 +20,7 @@ Note:
     The integers in the m arrays will be in the range of [-10000, 10000].
 
 ## My Python3 code ## [code is not good, it's at the end of the spectrum; copying costs O(n)]
+'''
 import numpy as np
 class Solution:
     def maxDistance(self, arrays):

@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Given two strings S and T, return if they are equal when both are typed into empty text editors. # means a backspace character.
 
 Example 1:
@@ -38,6 +39,7 @@ Follow up:
 
 
 ## My Python3 code ##
+'''
 class Solution:
     def backspaceCompare(self, S, T):
         stack_S, stack_T = [], []

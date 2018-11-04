@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 A self-dividing number is a number that is divisible by every digit it contains.
 For example, 128 is a self-dividing number because 128 % 1 == 0, 128 % 2 == 0, and 128 % 8 == 0.
 Also, a self-dividing number is not allowed to contain the digit zero.
@@ -13,6 +14,7 @@ Note:
 The boundaries of each input argument are 1 <= left <= right <= 10000.
 
 ## My Python3 code ## (intermediate conversion to string might delay...always better to check conditions with int itself)
+'''
 ## The // does integer division by a power of ten to move the digit to the ones position, then the % gets the remainder after division by 10.
 
 class Solution:

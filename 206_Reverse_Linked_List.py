@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Reverse a singly linked list.
 
 Example:
@@ -11,6 +12,7 @@ Follow up:
 A linked list can be reversed either iteratively or recursively. Could you implement both?
 
 ## My Python code ## (iterative)
+'''
 
 # Definition for singly-linked list.
 # class ListNode(object):

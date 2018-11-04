@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 
 The count-and-say sequence is the sequence of integers with the first five terms as following:
 
@@ -25,6 +26,7 @@ Input: 4
 Output: "1211"
 
 ## My Python3 code ## (learnt the usage of groupby in itertools, looked at hints)
+'''
 
 from itertools import groupby
 class Solution:

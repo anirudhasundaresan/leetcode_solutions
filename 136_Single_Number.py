@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Given a non-empty array of integers, every element appears twice except for one. Find that single one.
 Note:
 Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
@@ -13,6 +14,7 @@ Input: [4,1,2,1,2]
 Output: 4
 
 ## My Python3 code ##
+'''
 
 from collections import Counter
 class Solution:

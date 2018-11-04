@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 
 Given a string S and a character C, return an array of integers representing the shortest distance from the character C in the string.
 Example 1:
@@ -13,6 +14,7 @@ C is a single character, and guaranteed to be in string S.
 All letters in S and C are lowercase.
 
 ## My Python3 code ##
+'''
 
 import numpy as np
 class Solution:

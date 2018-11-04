@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 
 We have two special characters. The first character can be represented by one bit 0. The second character can be represented by two bits (10 or 11).
 
@@ -24,6 +25,7 @@ bits[i] is always 0 or 1.
 
 
 ## My Python3 code ##
+'''
 
 class Solution(object):
     def isOneBitCharacter(self, bits):

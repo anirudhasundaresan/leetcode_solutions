@@ -1,4 +1,4 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem statement ##
 Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
 
@@ -13,6 +13,7 @@ Note: You may assume the string contain only lowercase letters.
 
 
 ## My Python3 code ## 
+'''
 # My code does a single pass through the array and uses stack
 # Other solutions use 'chr', 'ord', s.find and s.rfind - (https://docs.python.org/3/library/functions.html)
 ord('a') returns 97 and chr(97) returns 'a' (string return) -- raises ValueError if not in range (useful for try..except)

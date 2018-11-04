@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 
 Implement a MapSum class with insert, and sum methods.
 
@@ -14,6 +15,7 @@ Input: insert("app", 2), Output: Null
 Input: sum("ap"), Output: 5
 
 ## My Python3 code ## [Naturally this must make you think of dictionaries, not 2 separate lists..]
+'''
 class MapSum(object):
 
     def __init__(self):
@@ -22,7 +24,7 @@ class MapSum(object):
         """
         Initialize your data structure here.
         """
-        
+
 
     def insert(self, key, val):
         if key in self.key_list:
@@ -35,7 +37,7 @@ class MapSum(object):
         :type val: int
         :rtype: void
         """
-        
+
 
     def sum(self, prefix):
         summ=0
@@ -47,7 +49,7 @@ class MapSum(object):
         :type prefix: str
         :rtype: int
         """
-        
+
 
 
 # Your MapSum object will be instantiated and called as such:

@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 
 
 Given a sorted linked list, delete all duplicates such that each element appear only once.
@@ -13,6 +14,7 @@ Input: 1->1->2->3->3
 Output: 1->2->3
 
 ## My Python3 code ##
+'''
 
 # Definition for singly-linked list.
 # class ListNode:

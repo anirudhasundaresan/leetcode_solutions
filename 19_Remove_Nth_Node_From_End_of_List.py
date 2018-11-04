@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Given a linked list, remove the n-th node from the end of list and return its head.
 Example:
 Given linked list: 1->2->3->4->5, and n = 2.
@@ -10,6 +11,7 @@ Follow up:
 Could you do this in one pass?
 
 ## My Python code ##
+'''
 
 # Definition for singly-linked list.
 # class ListNode:

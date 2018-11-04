@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Reverse bits of a given 32 bits unsigned integer.
 
 Example:
@@ -12,6 +13,7 @@ Follow up:
 If this function is called many times, how would you optimize it?
 
 ## My Python code ##
+'''
 class Solution:
     # @param n, an integer
     # @return an integer

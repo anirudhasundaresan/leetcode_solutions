@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 
 You have a total of n coins that you want to form in a staircase shape, where every k-th row must have exactly k coins.
 
@@ -30,6 +31,7 @@ The coins can form the following rows:
 Because the 4th row is incomplete, we return 3.
 
 ## My Python3 code ## (return int((math.sqrt(8*n + 1)-1)/2 )) -- fastest? : Running sum: 1+2+3+...x < n, find x. 
+'''
 class Solution:
     def arrangeCoins(self, n):
         if n==1 or n==0:

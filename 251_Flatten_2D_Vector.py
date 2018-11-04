@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Implement an iterator to flatten a 2d vector.
 
 Example:
@@ -15,6 +16,7 @@ Explanation: By calling next repeatedly until hasNext returns false,
              the order of elements returned by next should be: [1,2,3,4,5,6].
              
 ## My Python code ##
+'''
 class Vector2D(object):
 
 ''' # for the first function, it is faster

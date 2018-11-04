@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Given two integers L and R, find the count of numbers in the range [L, R] (inclusive) having a prime number of set bits in their binary representation.
 (Recall that the number of set bits an integer has is the number of 1s present when written in binary. For example, 21 written in binary is 10101 which has 3 set bits. Also, 1 is not a prime.)
 Example 1:
@@ -28,6 +29,7 @@ L, R will be integers L <= R in the range [1, 10^6].
 R - L will be at most 10000.
 
 ## My Python3 code ##
+'''
 ****I did not use the info about the ranges of L,R. If that could be used, we can check for primes only till 1...19.****
 *** Hint: Write a helper function to count the number of set bits in a number, then check whether the number of set bits is 2, 3, 5, 7, 11, 13, 17 or 19.***
 ####NOTE: string.count('1') will give count of element '1' in string..No need to use for loops. 

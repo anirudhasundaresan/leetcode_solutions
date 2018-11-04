@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Given a non-empty array of integers, return the k most frequent elements.
 
 For example,
@@ -10,6 +11,7 @@ You may assume k is always valid, 1 ≤ k ≤ number of unique elements.
 Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
 
 ## My Python code ## (one liner: return zip(*collections.Counter(nums).most_common(k))[0])
+'''
 from collections import Counter
 class Solution(object):
     def topKFrequent(self, nums, k):

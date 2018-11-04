@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 
 Given a paragraph and a list of banned words, return the most frequent word that is not in the list of banned words.  It is guaranteed there is at least one word that isn't banned, and that the answer is unique.
 
@@ -30,6 +31,7 @@ There are no hyphens or hyphenated words.
 Words only consist of letters, never apostrophes or other punctuation symbols.
 
 ## My Python3 code ##
+'''
 from collections import Counter
 class Solution:
     def mostCommonWord(self, paragraph, banned):

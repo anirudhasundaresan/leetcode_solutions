@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 
 Given two strings s and t , write a function to determine if t is an anagram of s.
 
@@ -19,6 +20,7 @@ What if the inputs contain unicode characters? How would you adapt your solution
 
 
 ## My Python3 code ## (Also: return all([s.count(c)==t.count(c) for c in string.ascii_lowercase]))
+'''
 
 from collections import Counter
 class Solution:

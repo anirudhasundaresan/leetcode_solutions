@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
 An input string is valid if:
@@ -30,6 +31,7 @@ Input: "{[]}"
 Output: true
 
 ## My Python3 code ##
+'''
 class Solution:
     def isValid(self, s):
         stack = []

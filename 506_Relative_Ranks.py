@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
  Given scores of N athletes, find their relative ranks and the people with the top three highest scores, who will be awarded medals: "Gold Medal", "Silver Medal" and "Bronze Medal".
 
 Example 1:
@@ -16,6 +17,7 @@ Note:
 
 
 ## My Python3 code ##
+'''
 class Solution:
     def findRelativeRanks(self, nums):
         nums_s = sorted(nums, reverse=True)

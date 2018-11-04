@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 
 Given a word, you need to judge whether the usage of capitals in it is right or not.
 
@@ -18,6 +19,7 @@ Output: False
 Note: The input will be a non-empty word consisting of uppercase and lowercase latin letters.
 
 ## My Python3 code ##
+'''
 class Solution:
     def detectCapitalUse(self, word):
         if word.lower()==word or word.upper()==word or (word[0].isupper() and word[1:]==word[1:].lower()):

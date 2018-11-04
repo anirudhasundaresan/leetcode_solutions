@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Given a sorted array consisting of only integers where every element appears twice except for one element which appears once. Find this single element that appears only once.
 
 Example 1:
@@ -11,6 +12,7 @@ Output: 10
 Note: Your solution should run in O(log n) time and O(1) space.
 
 ## My Python3 code ##
+'''
 from collections import Counter
 class Solution:
     def singleNonDuplicate(self, nums):

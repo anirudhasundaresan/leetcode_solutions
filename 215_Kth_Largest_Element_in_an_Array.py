@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth distinct element.
 
 Example 1:
@@ -14,6 +15,7 @@ Note:
 You may assume k is always valid, 1 ≤ k ≤ array's length.
 
 ## My Python3 code ##
+'''
 class Solution:
     def findKthLargest(self, nums, k):
         nums = sorted(nums, reverse=True)

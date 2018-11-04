@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 
 Given an arbitrary ransom note string and another string containing letters from all the magazines, write a function that will return true if the ransom note can be constructed from the magazines ; otherwise, it will return false.
 
@@ -13,6 +14,7 @@ canConstruct("aa", "ab") -> false
 canConstruct("aa", "aab") -> true
 
 ## My Python3 code ## [or you can compare the count of ransomnote values]
+'''
 class Solution:
     def canConstruct(self, ransomNote, magazine):
         magazine = list(magazine)

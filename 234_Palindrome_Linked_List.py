@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Given a singly linked list, determine if it is a palindrome.
 
 Example 1:
@@ -13,6 +14,7 @@ Follow up:
 Could you do it in O(n) time and O(1) space?
 
 ## My Python3 code ##
+'''
 
 # Definition for singly-linked list.
 # class ListNode:

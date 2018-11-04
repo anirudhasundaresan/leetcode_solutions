@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 
 Given a string, you need to reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
 
@@ -9,6 +10,7 @@ Output: "s'teL ekat edoCteeL tsetnoc"
 Note: In the string, each word is separated by single space and there will not be any extra space in the string.
 
 ## My Python code ## (one liner: return " ".join(s[::-1].split(" ")[::-1]))
+'''
 
 class Solution(object):
     def reverseWords(self, s):

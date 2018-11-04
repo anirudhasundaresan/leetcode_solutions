@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 There is a list of sorted integers from 1 to n. Starting from left to right, remove the first number and every other number afterward until you reach the end of the list.
 Repeat the previous step again, but this time from right to left, remove the right most number and every other number from the remaining numbers.
 We keep repeating the steps again, alternating left to right and right to left, until a single number remains.
@@ -18,6 +19,7 @@ Output:
 6
 
 ## My Python3 code ##
+'''
 class Solution:
     def lastRemaining(self, n):   ### some sols have from_left = True flag and from_left = not from_left inside while...
         lis = range(1,n+1)

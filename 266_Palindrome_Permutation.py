@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Given a string, determine if a permutation of the string could form a palindrome.
 
 Example 1:
@@ -17,6 +18,7 @@ Output: true
 
 
 ## My Python3 code ## (Simpler to check: if no. of odds in counter is < 2)
+'''
 from collections import Counter
 class Solution:
     def canPermutePalindrome(self, s):

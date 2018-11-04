@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Write a function to find the longest common prefix string amongst an array of strings.
 
 If there is no common prefix, return an empty string "".
@@ -18,6 +19,7 @@ Note:
 All given inputs are in lowercase letters a-z.
 
 ## My Python code ##
+'''
 class Solution(object):
     def longestCommonPrefix(self, strs):
         if strs==[]:

@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Let's call an array A a mountain if the following properties hold:
 
 A.length >= 3
@@ -21,6 +22,7 @@ Note:
 A is a mountain, as defined above.
 
 ## My Python3 code ##
+'''
 class Solution(object):
     def peakIndexInMountainArray(self, A):
         # There can be many variations of O(n), but strive for a O(log n) using binary search.

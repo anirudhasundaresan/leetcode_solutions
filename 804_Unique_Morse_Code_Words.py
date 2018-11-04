@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 International Morse Code defines a standard encoding where each letter is mapped to a series of dots and dashes, as follows: "a" maps to ".-", "b" maps to "-...", "c" maps to "-.-.", and so on.
 
 For convenience, the full table for the 26 letters of the English alphabet is given below:
@@ -27,6 +28,7 @@ Each words[i] will have length in range [1, 12].
 words[i] will only consist of lowercase letters.
 
 ## My Python3 code ##
+'''
 
 import string
 class Solution:

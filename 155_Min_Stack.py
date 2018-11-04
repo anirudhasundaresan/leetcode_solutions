@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
 
 push(x) -- Push element x onto stack.
@@ -17,6 +18,7 @@ minStack.top();      --> Returns 0.
 minStack.getMin();   --> Returns -2.
 
 ## My Python3 code ## (not a good solution)
+'''
 ## Better solution is to create a new list called min_stack and whenever x < min_stack[-1], append x onto min_stack. 
 ## This way, during function call, only min_stack[-1] need to be returned. 
 

@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 
 Given a binary matrix A, we want to flip the image horizontally, then invert it, and return the resulting image.
 
@@ -26,6 +27,7 @@ Notes:
 
 
 ## My Python3 code ##
+'''
 
 class Solution:
     def flipAndInvertImage(self, A):
@@ -37,10 +39,10 @@ class Solution:
         return A
 
 #       return [[1-v for v in row[::-1]] for row in A]
-        
+
         """
         :type A: List[List[int]]
         :rtype: List[List[int]]
         """
-        
-        
+
+

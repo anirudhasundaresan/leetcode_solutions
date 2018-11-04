@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
 
 Example 1:
@@ -18,6 +19,7 @@ Your algorithm should run in linear runtime complexity. Could you implement it u
 
 
 ## My Python3 code ## (Best answer: return int((1+len(nums))*len(nums)/2-sum(nums))) [sum of all nums - what should have been the sum] 
+'''
 ## same as: ((sum(range(len(nums)+1)) - sum(nums)))
 class Solution: 
 # (From SO) But the fact that it documents that dicts are hash tables implies pretty strongly that key in d, d[key], and d.get(key) are all going to be O(1).

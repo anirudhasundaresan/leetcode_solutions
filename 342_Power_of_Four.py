@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
  Given an integer (signed 32 bits), write a function to check whether it is a power of 4.
 
 Example:
@@ -8,6 +9,7 @@ Given num = 16, return true. Given num = 5, return false.
 Follow up: Could you solve it without loops/recursion?
 
 ## My Python3 code ##
+'''
 class Solution:
     def isPowerOfFour(self, num): ## all three approaches place me in the same percentile
         # this is the actual bit manipulation technique, not my own 

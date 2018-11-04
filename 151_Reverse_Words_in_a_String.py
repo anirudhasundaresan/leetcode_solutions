@@ -1,5 +1,6 @@
-#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
+#!/home/anirudha/anaconda3/bin/python
 ## Problem Statement ##
+'''
 
 Given an input string, reverse the string word by word.
 Example:  
@@ -14,6 +15,7 @@ You need to reduce multiple spaces between two words to a single space in the re
 Follow up: For C programmers, try to solve it in-place in O(1) space.
 
 ## My Python code ##
+'''
 
 class Solution(object):
     def reverseWords(self, s):
