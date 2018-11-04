@@ -1,3 +1,4 @@
+#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
 ## Problem Statement ##
 Given a pattern and a string str, find if str follows the same pattern.
 

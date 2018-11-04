@@ -1,3 +1,4 @@
+#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
 ## Problem Statement ##
 Implement an iterator to flatten a 2d vector.
 

@@ -1,3 +1,4 @@
+#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
 ## Problem Statement ##
 Given an array of integers, find if the array contains any duplicates.
 

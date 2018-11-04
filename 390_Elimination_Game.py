@@ -1,3 +1,4 @@
+#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
 ## Problem Statement ##
 There is a list of sorted integers from 1 to n. Starting from left to right, remove the first number and every other number afterward until you reach the end of the list.
 Repeat the previous step again, but this time from right to left, remove the right most number and every other number from the remaining numbers.

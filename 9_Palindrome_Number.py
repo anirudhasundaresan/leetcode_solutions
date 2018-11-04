@@ -1,3 +1,4 @@
+#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
 ## Problem Statement ##
 
 Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
@@ -32,7 +33,7 @@ class Solution:
         :type x: int
         :rtype: bool
         """
-### Without using string, but this consumes a list memory..###        
+### Without using string, but this consumes a list memory..###
 class Solution:
     def isPalindrome(self, x):
         lis = []
@@ -49,5 +50,5 @@ class Solution:
         :type x: int
         :rtype: bool
         """
-        
-        
+
+

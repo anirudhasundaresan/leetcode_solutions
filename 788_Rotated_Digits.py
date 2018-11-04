@@ -1,3 +1,4 @@
+#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
 ## Problem Statement ##
 X is a good number if after rotating each digit individually by 180 degrees, we get a valid number that is different from X.  Each digit must be rotated - we cannot choose to leave it alone.
 
@@ -8,7 +9,7 @@ Now given a positive number N, how many numbers X from 1 to N are good?
 Example:
 Input: 10
 Output: 4
-Explanation: 
+Explanation:
 There are four good numbers in the range [1, 10] : 2, 5, 6, 9.
 Note that 1 and 10 are not good numbers, since they remain unchanged after rotating.
 
@@ -38,11 +39,11 @@ class Solution:
                 else:
                     numb[index]='&'
             if numb!=num and numb.count('&')==0:
-                lis+=1  
+                lis+=1
         return lis
-    
-                    
-                            
+
+
+
         """
         :type N: int
         :rtype: int
@@ -52,7 +53,7 @@ class Solution:
     def rotatedDigits(self, N):
         """
         :type N: int
-        :rtype: int  2 5 6 9 
+        :rtype: int  2 5 6 9
         """
         count = 0
         for i in range(1,N+1):
@@ -61,5 +62,5 @@ class Solution:
                 continue
             if '2'in i or '5'in i or '9' in i or '6' in i:
                 count +=1
-        return count  
+        return count
 '''

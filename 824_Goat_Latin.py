@@ -1,3 +1,4 @@
+#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
 ## Problem Statement ##
 
 A sentence S is given, composed of words separated by spaces. Each word consists of lowercase and uppercase letters only.

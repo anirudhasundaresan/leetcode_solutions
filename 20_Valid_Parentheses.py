@@ -1,3 +1,4 @@
+#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
 ## Problem Statement ##
 Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 

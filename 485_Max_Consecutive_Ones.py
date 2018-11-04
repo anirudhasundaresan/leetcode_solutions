@@ -1,3 +1,4 @@
+#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
 ## Problem Statement ##
 Given a binary array, find the maximum number of consecutive 1s in this array.
 

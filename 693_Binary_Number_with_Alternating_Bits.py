@@ -1,3 +1,4 @@
+#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
 ## Problem Statement ##
 Given a positive integer, check whether it has alternating bits: namely, if two adjacent bits will always have different values.
 

@@ -1,3 +1,4 @@
+#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
 ## Problem Statement ##
 
 Given an array, rotate the array to the right by k steps, where k is non-negative.

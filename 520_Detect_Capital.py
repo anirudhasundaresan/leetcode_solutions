@@ -1,3 +1,4 @@
+#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
 ## Problem Statement ##
 
 Given a word, you need to judge whether the usage of capitals in it is right or not.

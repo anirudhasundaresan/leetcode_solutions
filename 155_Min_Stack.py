@@ -1,3 +1,4 @@
+#!/home/anirudha/anaconda3/bin:/home/anirudha/bin
 ## Problem Statement ##
 Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
 
