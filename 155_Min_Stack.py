@@ -19,10 +19,10 @@ minStack.getMin();   --> Returns -2.
 
 ## My Python3 code ## (not a good solution)
 '''
-## Better solution is to create a new list called min_stack and whenever x < min_stack[-1], append x onto min_stack. 
-## This way, during function call, only min_stack[-1] need to be returned. 
+## Better solution is to create a new list called min_stack and whenever x < min_stack[-1], append x onto min_stack.
+## This way, during function call, only min_stack[-1] need to be returned.
 
-import numpy as np 
+import numpy as np
 class MinStack:
     mini = np.inf
     def __init__(self):
@@ -44,13 +44,13 @@ class MinStack:
         self.stack.pop()
         """
         :rtype: void
-        """        
+        """
 
     def top(self):
         return self.stack[-1]
         """
         :rtype: int
-        """     
+        """
 
     def getMin(self):
         return mini

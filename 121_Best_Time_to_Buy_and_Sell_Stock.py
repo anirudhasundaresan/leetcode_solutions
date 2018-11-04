@@ -27,8 +27,8 @@ class Solution:
     def maxProfit(self, prices):
         if len(prices) < 2:
             return 0
-        cp, sp = prices[0], prices[0] 
-        profit = 0 
+        cp, sp = prices[0], prices[0]
+        profit = 0
         for price in prices[1:]:
             if price > cp:
                 sp = max(sp, price)
@@ -36,9 +36,9 @@ class Solution:
                 cp = price
                 sp = price
             profit = max(profit, (sp-cp))
-        return profit        
+        return profit
         """
         :type prices: List[int]
         :rtype: int
         """
-        
+

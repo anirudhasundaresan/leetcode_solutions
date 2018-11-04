@@ -14,11 +14,11 @@ Can you solve it without using extra space?
 #         self.val = x
 #         self.next = None
 #
-class Solution(object): 
+class Solution(object):
     def hasCycle(self, head):
         if head == None or head.next == None:
             return False
-        v_pointer = head 
+        v_pointer = head
         v2_pointer = head
         while v2_pointer!=None:
             if v2_pointer.next == None:
@@ -29,12 +29,12 @@ class Solution(object):
             if v_pointer == v2_pointer:
                 return True
         return False
-            
+
         """
         :type head: ListNode
         :rtype: bool
         """
-        
+
 
 ## Better solution ##
 
@@ -44,11 +44,11 @@ class Solution(object):
         :type head: ListNode
         :rtype: bool
         """
-        
+
         node, prev = head, None
         while node:
             if node.next==False:
-                return True            
+                return True
             node, prev = node.next, node
             prev.next = False
 

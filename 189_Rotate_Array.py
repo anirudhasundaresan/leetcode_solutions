@@ -16,7 +16,7 @@ Example 2:
 
 Input: [-1,-100,3,99] and k = 2
 Output: [3,99,-1,-100]
-Explanation: 
+Explanation:
 rotate 1 steps to the right: [99,-1,-100,3]
 rotate 2 steps to the right: [3,99,-1,-100]
 Note:
@@ -45,7 +45,7 @@ class Solution:
         :type k: int
         :rtype: void Do not return anything, modify nums in-place instead.
         """
-        
+
 [** Runs a bit slower, but smaller code**]
 [*** Removing the if conditions adds in ~15ms more..***]
 class Solution:

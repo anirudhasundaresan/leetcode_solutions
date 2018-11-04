@@ -3,7 +3,7 @@
 '''
 
 Given an input string, reverse the string word by word.
-Example:  
+Example:
 
 Input: "the sky is blue",
 Output: "blue is sky the".
@@ -41,4 +41,4 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-        
+

@@ -7,7 +7,7 @@ For example, the following two linked lists:
 A:          a1 → a2
                    ↘
                      c1 → c2 → c3
-                   ↗            
+                   ↗
 B:     b1 → b2 → b3
 begin to intersect at node c1.
 
@@ -33,9 +33,9 @@ class Solution(object):
         indexB = 0
         pointerA = headA
         pointerB = headB
-        if headA == None or headB == None: 
+        if headA == None or headB == None:
             return None
-        while pointerA!= None: 
+        while pointerA!= None:
             indexA = indexA + 1
             pointerA = pointerA.next
         while pointerB!= None:
@@ -44,7 +44,7 @@ class Solution(object):
         poA = headA
         poB = headB
         diff = abs(indexA - indexB)
-        
+
         if indexA >= indexB: #traverse diff nodes in A and then start comparing.
             while diff!=0:
                 poA = poA.next
@@ -57,7 +57,7 @@ class Solution(object):
             if poA==poB:
                 return poA
             return None
-        
+
         if indexA < indexB:
             while diff!=0:
                 poB = poB.next
@@ -69,12 +69,12 @@ class Solution(object):
                 poA = poA.next
             if poA == poB:
                 return poA
-            return None            
+            return None
         """
         :type head1, head1: ListNode
         :rtype: ListNode
         """
-        
+
 ## Better solution: ##
 
 class Solution(object):
