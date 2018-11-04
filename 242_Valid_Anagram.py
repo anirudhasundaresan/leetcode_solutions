@@ -1,7 +1,8 @@
 #!/home/anirudha/anaconda3/bin/python
-## Problem Statement ##
-'''
 
+## Problem Statement ##
+
+'''
 Given two strings s and t , write a function to determine if t is an anagram of s.
 
 Example 1:
@@ -17,10 +18,10 @@ You may assume the string contains only lowercase alphabets.
 
 Follow up:
 What if the inputs contain unicode characters? How would you adapt your solution to such case?
-
-
-## My Python3 code ## (Also: return all([s.count(c)==t.count(c) for c in string.ascii_lowercase]))
 '''
+
+## My Python3 code ##
+# (Also: return all([s.count(c)==t.count(c) for c in string.ascii_lowercase]))
 
 from collections import Counter
 class Solution:
@@ -35,4 +36,4 @@ class Solution:
         :type t: str
         :rtype: bool
         """
-        
+

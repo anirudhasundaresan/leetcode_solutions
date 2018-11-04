@@ -1,5 +1,7 @@
 #!/home/anirudha/anaconda3/bin/python
+
 ## Problem Statement ##
+
 '''
 Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
@@ -30,8 +32,10 @@ Example 5:
 Input: "{[]}"
 Output: true
 
-## My Python3 code ##
 '''
+
+## My Python3 code ##
+
 class Solution:
     def isValid(self, s):
         stack = []
@@ -51,12 +55,13 @@ class Solution:
             return True
         else:
             return False
-                
-            
+
+
         """
         :type s: str
         :rtype: bool
         """
+
 ## Smarter solution ## (but takes more time):
 '''
 class Solution(object):
@@ -68,13 +73,13 @@ class Solution(object):
         n = len(s)
         if n == 0:
             return True
-        
+
         if n % 2 != 0:
             return False
-            
+
         while '()' in s or '{}' in s or '[]' in s:
             s = s.replace('{}','').replace('()','').replace('[]','')
-        
+
         if s == '':
             return True
         else:

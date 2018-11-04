@@ -1,5 +1,7 @@
 #!/home/anirudha/anaconda3/bin/python
+
 ## Problem Statement ##
+
 '''
 Given an integer, write a function to determine if it is a power of two.
 
@@ -15,9 +17,10 @@ Example 3:
 
 Input: 218
 Output: false
+'''
 
 ## My Python3 code ## (better:  return True if n & (n-1) == 0 and n != 0 else False)
-'''
+
 class Solution:
     def isPowerOfTwo(self, n):
         if n<0:

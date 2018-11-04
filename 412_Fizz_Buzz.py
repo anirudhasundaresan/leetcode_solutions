@@ -1,5 +1,7 @@
 #!/home/anirudha/anaconda3/bin/python
+
 ## Problem Statement ##
+
 '''
 Write a program that outputs the string representation of numbers from 1 to n.
 But for multiples of three it should output “Fizz” instead of the number and for the multiples of five output “Buzz”. For numbers which are multiples of both three and five output “FizzBuzz”.
@@ -23,9 +25,9 @@ Return:
     "14",
     "FizzBuzz"
 ]
+'''
 
 ## My Python3 code ##
-'''
 
 class Solution:
     def fizzBuzz(self, n):
@@ -44,5 +46,5 @@ class Solution:
         :type n: int
         :rtype: List[str]
         """
-        
-        
+
+

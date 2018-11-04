@@ -1,7 +1,8 @@
 #!/home/anirudha/anaconda3/bin/python
-## Problem Statement ##
-'''
 
+## Problem Statement ##
+
+'''
 Given an input string, reverse the string word by word.
 Example:
 
@@ -13,9 +14,9 @@ A word is defined as a sequence of non-space characters.
 Input string may contain leading or trailing spaces. However, your reversed string should not contain leading or trailing spaces.
 You need to reduce multiple spaces between two words to a single space in the reversed string.
 Follow up: For C programmers, try to solve it in-place in O(1) space.
+'''
 
 ## My Python code ##
-'''
 
 class Solution(object):
     def reverseWords(self, s):
@@ -41,4 +42,10 @@ class Solution(object):
         :type s: str
         :rtype: str
         """
-
+'''
+# Better solution here:
+class Solution(object):
+    def reverseWords(self, s):
+        ls = s.split() # also takes care of leading and trailing whitespaces in addition to splitting the words into a list
+        return ' '.join(ls[::-1])
+'''

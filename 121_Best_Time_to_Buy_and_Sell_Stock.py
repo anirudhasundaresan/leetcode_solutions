@@ -1,4 +1,5 @@
 #!/home/anirudha/anaconda3/bin/python
+
 ## Problem Statement ##
 '''
 Say you have an array for which the ith element is the price of a given stock on day i.
@@ -21,6 +22,7 @@ Output: 0
 Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
 
+'''
 
 ## My Python3 code #3 (good solution: O(n))
 class Solution:

@@ -1,5 +1,7 @@
 #!/home/anirudha/anaconda3/bin/python
+
 ## Problem Statement ##
+
 '''
 Given an array of integers, find if the array contains any duplicates.
 
@@ -17,10 +19,9 @@ Example 3:
 
 Input: [1,1,1,3,3,4,3,2,4,2]
 Output: true
-
+'''
 
 ## My Python3 code ##
-'''
 
 class Solution:
     def containsDuplicate(self, nums):
@@ -32,4 +33,4 @@ class Solution:
         :type nums: List[int]
         :rtype: bool
         """
-        
+

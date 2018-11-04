@@ -1,4 +1,5 @@
 #!/home/anirudha/anaconda3/bin/python
+
 ## Problem Statement ##
 '''
 Implement strStr().
@@ -18,9 +19,10 @@ Clarification:
 What should we return when needle is an empty string? This is a great question to ask during an interview.
 
 For the purpose of this problem, we will return 0 when needle is an empty string. This is consistent to C's strstr() and Java's indexOf().
+'''
 
 ## My Python3 code ##
-'''
+
 class Solution:
     def strStr(self, haystack, needle):
         if needle=='':
@@ -29,11 +31,11 @@ class Solution:
             return haystack.index(needle) #index works with lists and strings
         else:
             return -1
-            
-            
+
+
         """
         :type haystack: str
         :type needle: str
         :rtype: int
         """
-        
+

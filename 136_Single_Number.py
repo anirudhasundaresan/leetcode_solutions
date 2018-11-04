@@ -1,4 +1,5 @@
 #!/home/anirudha/anaconda3/bin/python
+
 ## Problem Statement ##
 '''
 Given a non-empty array of integers, every element appears twice except for one. Find that single one.
@@ -13,8 +14,9 @@ Example 2:
 Input: [4,1,2,1,2]
 Output: 4
 
-## My Python3 code ##
 '''
+## My Python3 code ##
+
 
 from collections import Counter
 class Solution:
@@ -24,6 +26,7 @@ class Solution:
         :type nums: List[int]
         :rtype: int
         """
+        # Counter returns a dictionary, so try the code below:
         ### Or for i in Counter(nums).keys():
                    ##Counter(nums)[i] == 1
                    ##return i

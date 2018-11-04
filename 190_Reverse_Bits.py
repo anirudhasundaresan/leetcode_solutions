@@ -1,4 +1,5 @@
 #!/home/anirudha/anaconda3/bin/python
+
 ## Problem Statement ##
 '''
 Reverse bits of a given 32 bits unsigned integer.
@@ -12,8 +13,10 @@ Explanation: 43261596 represented in binary as 00000010100101000001111010011100,
 Follow up:
 If this function is called many times, how would you optimize it?
 
-## My Python code ##
 '''
+
+## My Python code ##
+
 class Solution:
     # @param n, an integer
     # @return an integer

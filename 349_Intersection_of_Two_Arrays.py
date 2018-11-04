@@ -1,5 +1,7 @@
 #!/home/anirudha/anaconda3/bin/python
+
 ## Problem Statement ##
+
 '''
  Given two arrays, write a function to compute their intersection.
 
@@ -10,9 +12,10 @@ Note:
 
     Each element in the result must be unique.
     The result can be in any order.
+'''
 
+## My Python3 code ##
 
-## My Pytho3 code ##
 class Solution:
     def intersection(self, nums1, nums2):
         return list(set(nums1).intersection(set(nums2))) ## Or use '&'
@@ -21,4 +24,4 @@ class Solution:
         :type nums2: List[int]
         :rtype: List[int]
         """
-        
+
