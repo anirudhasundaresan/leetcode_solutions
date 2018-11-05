@@ -1,7 +1,8 @@
 #!/home/anirudha/anaconda3/bin/python
-## Problem Statement ##
-'''
 
+## Problem Statement ##
+
+'''
 Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
 
 Example 1:
@@ -21,11 +22,10 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 Follow up:
 
 Coud you solve it without converting the integer to a string?
+'''
 
 ## My Python3 code ##
-'''
-'''
-'''
+
 class Solution:
     def isPalindrome(self, x):
         x = str(x)
@@ -36,8 +36,11 @@ class Solution:
         """
         :type x: int
         :rtype: bool
+
         """
+'''
 ### Without using string, but this consumes a list memory..###
+# Taking each digit and storing into list.
 class Solution:
     def isPalindrome(self, x):
         lis = []
@@ -54,5 +57,5 @@ class Solution:
         :type x: int
         :rtype: bool
         """
-
+'''
 

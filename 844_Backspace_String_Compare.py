@@ -1,4 +1,5 @@
 #!/home/anirudha/anaconda3/bin/python
+
 ## Problem Statement ##
 '''
 Given two strings S and T, return if they are equal when both are typed into empty text editors. # means a backspace character.
@@ -36,15 +37,15 @@ Note:
 Follow up:
 
     Can you solve it in O(N) time and O(1) space?
-
+'''
 
 ## My Python3 code ##
-'''
+
 class Solution:
     def backspaceCompare(self, S, T):
         stack_S, stack_T = [], []
         for i in S:
-            if i =='#': 
+            if i =='#':
                 if len(stack_S)!=0:
                     stack_S.pop()
             else:
