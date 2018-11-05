@@ -1,5 +1,7 @@
 #!/home/anirudha/anaconda3/bin/python
+
 ## Problem Statement ##
+
 '''
 We are given two strings, A and B.
 
@@ -15,9 +17,10 @@ Output: false
 Note:
 
 A and B will have length at most 100.
+'''
 
 ## My Python3 code ##
-'''
+
 class Solution:
     def rotateString(self, A, B):
         if A=='' and B=='':
@@ -32,4 +35,26 @@ class Solution:
         :type B: str
         :rtype: bool
         """
-        
+'''
+# Better code:
+
+from collections import Counter
+class Solution(object):
+    def rotateString(self, A, B):
+        if not len(A)==len(B):
+            return False
+        if not Counter(B) - Counter(A)==Counter():
+            return False
+        A = A + A
+        if B in A:
+            return True
+        else:
+            return False
+
+        """
+        :type A: str
+        :type B: str
+        :rtype: bool
+        """
+'''
+

@@ -1,5 +1,7 @@
 #!/home/anirudha/anaconda3/bin/python
+
 ## Problem Statement ##
+
 '''
 Given a positive integer, check whether it has alternating bits: namely, if two adjacent bits will always have different values.
 
@@ -23,9 +25,9 @@ Input: 10
 Output: True
 Explanation:
 The binary representation of 10 is: 1010.
+'''
 
 ## My Python3 code ##
-'''
 
 class Solution:
     def hasAlternatingBits(self, n):
@@ -34,9 +36,9 @@ class Solution:
             if arr[i+1]==arr[i]:
                 return False
         return True
-    
+
         """
         :type n: int
         :rtype: bool
         """
-        
+
