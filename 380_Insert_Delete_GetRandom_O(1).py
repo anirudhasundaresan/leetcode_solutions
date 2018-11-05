@@ -1,4 +1,5 @@
 #!/home/anirudha/anaconda3/bin/python
+
 ## Problem Statement ##
 '''
 Design a data structure that supports all following operations in average O(1) time.
@@ -32,9 +33,10 @@ randomSet.insert(2);
 
 // Since 2 is the only number in the set, getRandom always return 2.
 randomSet.getRandom();
+'''
 
 ## My Python3 code ##
-'''
+
 class RandomizedSet:
 
     def __init__(self):
@@ -42,7 +44,7 @@ class RandomizedSet:
         """
         Initialize your data structure here.
         """
-        
+
 
     def insert(self, val):
         if val in self.dic:
@@ -55,20 +57,20 @@ class RandomizedSet:
         :type val: int
         :rtype: bool
         """
-        
+
 
     def remove(self, val):
         if val not in self.dic:
             return False
         else:
-            del self.dic[val] # remember the del command 
+            del self.dic[val] # remember the del command
             return True
         """
         Removes a value from the set. Returns true if the set contained the specified element.
         :type val: int
         :rtype: bool
         """
-        
+
 
     def getRandom(self):
         return random.choice(list(self.dic.keys())) # remember this; d.keys() is an iterator in py3, hence you need to list()
@@ -76,7 +78,7 @@ class RandomizedSet:
         Get a random element from the set.
         :rtype: int
         """
-        
+
 
 
 # Your RandomizedSet object will be instantiated and called as such:

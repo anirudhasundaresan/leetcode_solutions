@@ -1,5 +1,7 @@
 #!/home/anirudha/anaconda3/bin/python
+
 ## Problem Statement ##
+
 '''
 Given a list of words and two words word1 and word2, return the shortest distance between these two words in the list.
 
@@ -14,12 +16,11 @@ Output: 1
 
 Note:
 You may assume that word1 does not equal to word2, and word1 and word2 are both in the list.
-
-
-## My Python3 code ##
 '''
 
-import numpy as np 
+## My Python3 code ##
+
+import numpy as np
 class Solution:
     def shortestDistance(self, words, word1, word2):
         min_ = np.inf
@@ -32,7 +33,7 @@ class Solution:
         for i in word1_ind:
             for j in word2_ind:
                 min_ = min(abs(i-j),min_)
-        return min_        
+        return min_
         """
         :type words: List[str]
         :type word1: str

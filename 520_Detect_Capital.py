@@ -1,4 +1,5 @@
 #!/home/anirudha/anaconda3/bin/python
+
 ## Problem Statement ##
 '''
 
@@ -17,9 +18,9 @@ Example 2:
 Input: "FlaG"
 Output: False
 Note: The input will be a non-empty word consisting of uppercase and lowercase latin letters.
-
-## My Python3 code ##
 '''
+## My Python3 code ##
+
 class Solution:
     def detectCapitalUse(self, word):
         if word.lower()==word or word.upper()==word or (word[0].isupper() and word[1:]==word[1:].lower()):
@@ -30,7 +31,7 @@ class Solution:
         :type word: str
         :rtype: bool
         """
-        
+
 '''Better....
 class Solution:
     def detectCapitalUse(self, word):

@@ -1,4 +1,5 @@
 #!/home/anirudha/anaconda3/bin/python
+
 ## Problem Statement ##
 '''
 Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), determine if a person could attend all meetings.
@@ -11,10 +12,9 @@ Example 2:
 
 Input: [[7,10],[2,4]]
 Output: true
-
+'''
 
 ## My Python3 code ##
-'''
 
 # Definition for an interval.
 # class Interval:
@@ -24,7 +24,7 @@ Output: true
 
 def sort_func(obj):
     return obj.start
-    
+
 class Solution:  ### Best solution has done start end comparison.
     def canAttendMeetings(self, intervals):
         lis = []
@@ -36,12 +36,12 @@ class Solution:  ### Best solution has done start end comparison.
             return True
         else:
             return False
-    
+
 
         """
         :type intervals: List[Interval]
         :rtype: bool
         """
-        
+
 ## Also, instead of creating a new function, it would be better to use lambda function.
 ## intervals.sort(key = lambda x: x.start)

@@ -1,4 +1,5 @@
 #!/home/anirudha/anaconda3/bin/python
+
 ## Problem Statement ##
 '''
 Given a string, determine if a permutation of the string could form a palindrome.
@@ -15,10 +16,10 @@ Example 3:
 
 Input: "carerac"
 Output: true
-
+'''
 
 ## My Python3 code ## (Simpler to check: if no. of odds in counter is < 2)
-'''
+
 from collections import Counter
 class Solution:
     def canPermutePalindrome(self, s):
@@ -27,7 +28,7 @@ class Solution:
         ctr2 = 0
         lis = list(Counter(s).values())
         for i in lis:
-            if len(s)%2!=0: 
+            if len(s)%2!=0:
                 if i%2!=0:
                     print(ctr)
                     ctr+=1
@@ -46,4 +47,4 @@ class Solution:
         :type s: str
         :rtype: bool
         """
-        
+

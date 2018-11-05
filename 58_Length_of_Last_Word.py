@@ -1,5 +1,7 @@
 #!/home/anirudha/anaconda3/bin/python
+
 ## Problem Statement ##
+
 '''
 Given a string s consists of upper/lower-case alphabets and empty space characters ' ', return the length of last word in the string.
 
@@ -8,9 +10,8 @@ Note: A word is defined as a character sequence consists of non-space characters
 Example:
 Input: "Hello World"
 Output: 5
-
-## My Python3 code ##
 '''
+## My Python3 code ##
 
 class Solution:
     def lengthOfLastWord(self, s):
