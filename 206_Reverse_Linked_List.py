@@ -22,21 +22,22 @@ A linked list can be reversed either iteratively or recursively. Could you imple
 
 class Solution(object):
     def reverseList(self, head):
-        # This can be done in an iterative or recursive fashion 
+        # This can be done in an iterative or recursive fashion
         if head==None:
             return head
         prev_node = None
-        next_node = head.next 
+        next_node = head.next
         while head is not None:
+            # move the head itself since then, we can return head.
             head.next = prev_node
             prev_node = head
             head = next_node
             if not next_node==None:
-                next_node = next_node.next              
+                next_node = next_node.next
         return prev_node
 
         """
         :type head: ListNode
         :rtype: ListNode
         """
-        
+
