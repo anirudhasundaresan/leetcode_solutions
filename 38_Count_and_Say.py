@@ -35,17 +35,17 @@ class Solution:
             if ct==n:
                 return stri
             stri2 =''
-            total_lists = [list(g) for k,g in groupby(list(stri))            ]
+            total_lists = [list(g) for k,g in groupby(list(stri))]
             for i in total_lists:
                 stri2+= str(len(i)) + str(i[0])
             ct+=1
             print("number ", ct, ": ", stri2 )
             return rec_str(stri2, ct)
         return rec_str('1', 1)
-        
-        
+
+
         """
         :type n: int
         :rtype: str
         """
-        
+
