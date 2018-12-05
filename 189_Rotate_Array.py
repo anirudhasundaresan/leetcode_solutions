@@ -1,7 +1,8 @@
 #!/home/anirudha/anaconda3/bin/python
-## Problem Statement ##
-'''
 
+## Problem Statement ##
+
+'''
 Given an array, rotate the array to the right by k steps, where k is non-negative.
 
 Example 1:
@@ -23,9 +24,9 @@ Note:
 
 Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
 Could you do it in-place with O(1) extra space?
+'''
 
 ## My Python3 code ##
-'''
 
 class Solution:
     def rotate(self, nums, k):
@@ -60,3 +61,10 @@ class Solution:
         :type k: int
         :rtype: void Do not return anything, modify nums in-place instead.
         """
+
+
+'''
+Better solution:
+n = len(nums) - k
+nums[:] = nums[n:] + nums[:n]
+'''
