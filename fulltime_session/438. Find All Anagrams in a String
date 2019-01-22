@@ -1,0 +1,154 @@
+'''
+438. Find All Anagrams in a String
+
+Given a string s and a non-empty string p, find all the start indices of p's anagrams in s.
+
+Strings consists of lowercase English letters only and the length of both strings s and p will not be larger than 20,100.
+
+The order of output does not matter.
+
+Example 1:
+
+Input:
+s: "cbaebabacd" p: "abc"
+
+Output:
+[0, 6]
+
+Explanation:
+The substring with start index = 0 is "cba", which is an anagram of "abc".
+The substring with start index = 6 is "bac", which is an anagram of "abc".
+Example 2:
+
+Input:
+s: "abab" p: "ab"
+
+Output:
+[0, 1, 2]
+
+Explanation:
+The substring with start index = 0 is "ab", which is an anagram of "ab".
+The substring with start index = 1 is "ba", which is an anagram of "ab".
+The substring with start index = 2 is "ab", which is an anagram of "ab".
+
+Answer: Counter & sliding window
+'''
+
+
+from collections import Counter
+class Solution:
+    def findAnagrams(self, s, p):
+        p_ = len(p)
+
+        def generate_subs(s):
+            for i in range(len(s)-p_+1):
+                yield Counter((s[i:i+p_])), i
+
+        index = []
+        pc = Counter(p)
+        for s_, ind in generate_subs(s):
+            if pc==s_:
+                index.append(ind)
+        return index
+        """
+        :type s: str
+        :type p: str
+        :rtype: List[int]
+        """
+
+''' A better approach is to update Counter based on each character, this would save more time
+from collections import Counter
+
+def findAnagrams(self, s, p):
+    """
+    :type s: str
+    :type p: str
+    :rtype: List[int]
+    """
+    res = []
+    pCounter = Counter(p)
+    sCounter = Counter(s[:len(p)-1])
+    for i in range(len(p)-1,len(s)):
+        sCounter[s[i]] += 1   # include a new char in the window
+        if sCounter == pCounter:    # This step is O(1), since there are at most 26 English letters
+            res.append(i-len(p)+1)   # append the starting index
+        sCounter[s[i-len(p)+1]] -= 1   # decrease the count of oldest char in the window
+        if sCounter[s[i-len(p)+1]] == 0:
+            del sCounter[s[i-len(p)+1]]   # remove the count if it is 0
+    return res
+'''
+
+
+''' My tries:
+
+class Solution: # failed, TLE
+    def findAnagrams(self, s, p):
+        p_ = len(p)
+
+        def generate_subs(s):
+            for i in range(len(s)-p_+1):
+                yield ''.join(sorted(s[i:i+p_])), i
+
+        index = []
+        p = ''.join(sorted(p))
+        for s_, ind in generate_subs(s):
+            if p==s_:
+                index.append(ind)
+        return index
+        """
+        :type s: str
+        :type p: str
+        :rtype: List[int]
+        """
+
+
+
+from itertools import permutations # using generator, but still TLE
+
+class Solution:
+    def findAnagrams(self, s, p):
+        if len(p) > len(s):
+            return []
+
+        def find_anags(p_):
+            for x in permutations(p_):
+                yield ''.join(x)
+        # [''.join(x) for x in permutations(p)]
+        index = set()
+        for anag in find_anags(p):
+            ind = -1
+            while True:
+                ind = s.find(anag, ind+1)
+                print(ind, anag)
+                if ind!=-1:
+                    index.add(ind)
+                else:
+                    break
+        return list(index)
+
+        """
+        :type s: str
+        :type p: str
+        :rtype: List[int]
+        """
+
+
+
+
+class Solution: # failed, TLE
+    def findAnagrams(self, s, p):
+        index = []
+        p = ''.join(sorted(p))
+        p_ = len(p)
+        dic = {p__:True for p__ in p}
+        for ind, s_ in enumerate(s):
+            if s_ in dic: # since dic lookup is much faster than string lookup
+                if sorted(s[ind:ind + p_]) == list(p):
+                    index.append(ind)
+        return index
+        """
+        :type s: str
+        :type p: str
+        :rtype: List[int]
+        """
+'''

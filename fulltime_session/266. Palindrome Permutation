@@ -1,0 +1,39 @@
+'''
+266. Palindrome Permutation
+
+Given a string, determine if a permutation of the string could form a palindrome.
+
+Example 1:
+
+Input: "code"
+Output: false
+Example 2:
+
+Input: "aab"
+Output: true
+Example 3:
+
+Input: "carerac"
+Output: true
+
+Answer: Counter, dictionary
+
+'''
+
+from collections import Counter
+class Solution:
+    def canPermutePalindrome(self, s):
+        if len(s)%2==0:
+            return all([i%2==0 for i in Counter(s).values()])
+        else:
+            return [i%2==0 for i in Counter(s).values()].count(False) == 1
+
+        """
+        :type s: str
+        :rtype: bool
+        """
+
+''' (Better solution - independent of length of the string)
+def canPermutePalindrome(self, s):
+    return sum(v % 2 for v in collections.Counter(s).values()) < 2
+'''

@@ -1,0 +1,66 @@
+'''
+884. Uncommon Words from Two Sentences
+We are given two sentences A and B.  (A sentence is a string of space separated words.  Each word consists only of lowercase letters.)
+
+A word is uncommon if it appears exactly once in one of the sentences, and does not appear in the other sentence.
+
+Return a list of all uncommon words.
+
+You may return the list in any order.
+
+Example 1:
+
+Input: A = "this apple is sweet", B = "this apple is sour"
+Output: ["sweet","sour"]
+Example 2:
+
+Input: A = "apple apple", B = "banana"
+Output: ["banana"]
+
+
+Note:
+
+0 <= A.length <= 200
+0 <= B.length <= 200
+A and B both contain only spaces and lowercase letters.
+
+Answer: Dictionary
+'''
+
+from collections import defaultdict
+class Solution:
+    def uncommonFromSentences(self, A, B):
+        a, b = A.split(' '), B.split(' ')
+        str_dic = defaultdict(list)
+        ls = []
+        for a_ in a:
+            str_dic[a_].append('a') # directly count them instead of appending; no use appending
+        for b_ in b:
+            str_dic[b_].append('b')
+        for key, value in str_dic.items():
+            if len(value)==1:
+                ls.append(key)
+        return ls
+
+        """
+        :type A: str
+        :type B: str
+        :rtype: List[str]
+        """
+
+'''
+# Better answer?
+from collections import defaultdict
+
+class Solution:
+    def uncommonFromSentences(self, A, B):
+        """
+        :type A: str
+        :type B: str
+        :rtype: List[str]
+        """
+        count = defaultdict(lambda: 0)
+        for word in A.split(" ") + B.split(" "):
+            count[word] += 1
+        return [word for word in count if count[word] == 1]
+'''

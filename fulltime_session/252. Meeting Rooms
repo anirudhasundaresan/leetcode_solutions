@@ -1,0 +1,61 @@
+'''
+252. Meeting Rooms
+
+Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), determine if a person could attend all meetings.
+
+Example 1:
+
+Input: [[0,30],[5,10],[15,20]]
+Output: false
+Example 2:
+
+Input: [[7,10],[2,4]]
+Output: true
+
+Answer: Sorting
+'''
+
+# Definition for an interval.
+# class Interval:
+#     def __init__(self, s=0, e=0):
+#         self.start = s
+#         self.end = e
+
+class Solution:
+    def canAttendMeetings(self, intervals):
+        ls = []
+        for in_ in intervals:
+            ls.append(str(in_.start)+'-s')
+            ls.append(str(in_.end)+'-e')
+        ctr = 0
+        print(ls)
+        ls.sort(key=lambda x: ((int(x.split('-')[0])), x.split('-')[1])) # checking condition based on 2 fields
+        print(ls)
+        for l in ls:
+            if l.endswith('s'):
+                ctr+=1
+            else:
+                ctr-=1
+            if ctr>1:
+                return False
+        return True
+
+'''
+Better solution:
+
+def canAttendMeetings(self, intervals):
+    intervals.sort(key=lambda x: x.start)
+
+    for i in range(1, len(intervals)):
+        if intervals[i].start < intervals[i-1].end:
+            return False
+
+    return True
+'''
+
+
+
+        """
+        :type intervals: List[Interval]
+        :rtype: bool
+        """

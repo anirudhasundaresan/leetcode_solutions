@@ -1,0 +1,61 @@
+'''
+624. Maximum Distance in Arrays
+
+Given m arrays, and each array is sorted in ascending order. Now you can pick up two integers from two different arrays (each array picks one) and calculate the distance. We define the distance between two integers a and b to be their absolute difference |a-b|. Your task is to find the maximum distance.
+
+Example 1:
+Input:
+[[1,2,3],
+ [4,5],
+ [1,2,3]]
+Output: 4
+Explanation:
+One way to reach the maximum distance 4 is to pick 1 in the first or third array and pick 5 in the second array.
+Note:
+Each given array will have at least 1 number. There will be at least two non-empty arrays.
+The total number of the integers in all the m arrays will be in the range of [2, 10000].
+The integers in the m arrays will be in the range of [-10000, 10000].
+
+Answer: logic
+
+'''
+class Solution:
+    def maxDistance(self, arrays):
+        max_, min_ = [], []
+        for ind, array in enumerate(arrays):
+            max_.append((array[-1], ind))
+            min_.append((array[0], ind))
+        max_.sort(key=lambda x: -x[0])
+        min_.sort(key=lambda x: x[0])
+        if max_[0][1] == min_[0][1]:
+            return max(max_[1][0] - min_[0][0], max_[0][0] - min_[1][0])
+        else:
+            return max_[0][0] - min_[0][0]
+
+
+        """
+        :type arrays: List[List[int]]
+        :rtype: int
+        """
+
+'''
+Better solution: does not include sorting, like I did
+
+class Solution(object):
+    def maxDistance(self, arrays):
+        """
+        :type arrays: List[List[int]]
+        :rtype: int
+        """
+
+        minnum = arrays[0][0]
+        maxnum = arrays[0][-1]
+        maxdiff = float('-inf')
+
+        for array in arrays[1:]:
+            maxdiff = max(maxdiff, array[-1]-minnum, maxnum-array[0])
+            minnum = min(minnum, array[0])
+            maxnum = max(maxnum, array[-1])
+
+        return maxdiff
+'''

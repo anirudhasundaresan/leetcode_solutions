@@ -1,0 +1,114 @@
+'''
+346. Moving Average from Data Stream
+
+Given a stream of integers and a window size, calculate the moving average of all integers in the sliding window.
+
+Example:
+
+MovingAverage m = new MovingAverage(3);
+m.next(1) = 1
+m.next(10) = (1 + 10) / 2
+m.next(3) = (1 + 10 + 3) / 3
+m.next(5) = (10 + 3 + 5) / 3
+
+Answer: Queue
+'''
+# deque works
+
+from collections import deque
+class MovingAverage:
+
+    def __init__(self, size):
+        self.q = deque(maxlen=size)
+        """
+        Initialize your data structure here.
+        :type size: int
+        """
+
+    def next(self, val):
+        q_ = self.q
+        q_.append(val)
+        return float(sum(q_)/len(q_))
+        """
+        :type val: int
+        :rtype: float
+        """
+
+# Your MovingAverage object will be instantiated and called as such:
+# obj = MovingAverage(size)
+# param_1 = obj.next(val)
+
+'''
+Second solution: using queues, still TLE -- from import queue module
+
+import queue # since we need a FIFO structure
+class MovingAverage:
+
+    def __init__(self, size):
+        self.q = queue.Queue()
+        self.size = size
+
+        """
+        Initialize your data structure here.
+        :type size: int
+        """
+
+    def next(self, val):
+        if self.q.qsize() == self.size:
+            self.q.get()
+        self.q.put(val)
+        k = self.q.qsize()
+        ctr = 0
+        while k>0:
+            x = self.q.get()
+            ctr += x
+            self.q.put(x)
+            k -= 1
+        print(self.q.qsize())
+        return ctr/self.q.qsize()
+
+        """
+        :type val: int
+        :rtype: float
+        """
+
+
+
+# Your MovingAverage object will be instantiated and called as such:
+# obj = MovingAverage(size)
+# param_1 = obj.next(val)
+'''
+
+'''
+First solution: using lists, so output limit exceeded
+
+class MovingAverage:
+
+    def __init__(self, size):
+        self.ls = []
+        self.siz = size
+        """
+        Initialize your data structure here.
+        :type size: int
+        """
+
+
+    def next(self, val):
+        self.ls.append(val)
+        if len(self.ls) < self.siz:
+            print(self.ls)
+            return sum(self.ls)/len(self.ls)
+        else:
+            print(self.ls[-self.siz:])
+            return sum(self.ls[-self.siz:])/(self.siz)
+
+        """
+        :type val: int
+        :rtype: float
+        """
+
+
+# Your MovingAverage object will be instantiated and called as such:
+# obj = MovingAverage(size)
+# param_1 = obj.next(val)
+'''
