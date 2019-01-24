@@ -1,0 +1,85 @@
+'''
+441. Arranging Coins
+
+You have a total of n coins that you want to form in a staircase shape, where every k-th row must have exactly k coins.
+
+Given n, find the total number of full staircase rows that can be formed.
+
+n is a non-negative integer and fits within the range of a 32-bit signed integer.
+
+Example 1:
+
+n = 5
+
+The coins can form the following rows:
+¤
+¤ ¤
+¤ ¤
+
+Because the 3rd row is incomplete, we return 2.
+Example 2:
+
+n = 8
+
+The coins can form the following rows:
+¤
+¤ ¤
+¤ ¤ ¤
+¤ ¤
+
+Because the 4th row is incomplete, we return 3.
+
+Answer: Square root of n, as the limit for searching
+
+'''
+# Not sure why this worked, unable to understand the while condition, which I thought was a mistake!
+
+import math
+class Solution(object):
+    def arrangeCoins(self, n):
+        i, count = 1, 0
+        while (i <= int(math.sqrt(n))) + 1:
+            count += i
+            if count > n:
+                return i - 1
+            elif count==n:
+                return i
+            i += 1
+        return 0
+        """
+        :type n: int
+        :rtype: int
+        """
+
+'''
+Better solutions:
+https://leetcode.com/problems/arranging-coins/discuss/162814/Python-O(1)-Math-Solution-Fully-Explained
+https://leetcode.com/problems/arranging-coins/discuss/92273/simple-python-solution
+
+class Solution(object):
+    def arrangeCoins(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        k = 1
+
+        while n >= 0:
+            n -= k
+            k += 1
+
+        return k - 2
+
+# OR
+
+import math
+class Solution(object):
+def arrangeCoins(self, n):
+    """
+    :type n: int
+    :rtype: int
+    """
+    #int is simply to floor the floating point so we get the largest integer smaller than the expression
+    return int((math.sqrt(8 * n + 1)-1)/2)```
+# (1 + h)*h / 2 <= n
+'''

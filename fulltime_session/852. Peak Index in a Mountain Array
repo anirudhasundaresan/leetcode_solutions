@@ -1,0 +1,70 @@
+'''
+852. Peak Index in a Mountain Array
+
+Let's call an array A a mountain if the following properties hold:
+
+A.length >= 3
+There exists some 0 < i < A.length - 1 such that A[0] < A[1] < ... A[i-1] < A[i] > A[i+1] > ... > A[A.length - 1]
+Given an array that is definitely a mountain, return any i such that A[0] < A[1] < ... A[i-1] < A[i] > A[i+1] > ... > A[A.length - 1].
+
+Example 1:
+
+Input: [0,1,0]
+Output: 1
+Example 2:
+
+Input: [0,2,1,0]
+Output: 1
+Note:
+
+3 <= A.length <= 10000
+0 <= A[i] <= 10^6
+A is a mountain, as defined above.
+
+Answer: Binary search - anytime you can think of reducing the size of array for checking/ divide and conquer, use binary search
+
+'''
+
+
+class Solution:
+    def peakIndexInMountainArray(self, A):
+        '''
+        # first try is with O(n) operations
+        for ind, a in enumerate(A):
+            if A[ind-1] < a > A[ind+1]:
+                return ind
+        '''
+        # in the above method, we are not using the property of the array A, as such.
+        # try binary search here
+        lo = 0
+        hi = len(A) - 1
+        while lo < hi:
+            mid = (hi + lo) // 2
+            if A[mid-1] < A[mid] > A[mid+1]:
+                return mid
+            elif A[mid-1] < A[mid] < A[mid+1]:
+                lo = mid + 1
+            elif A[mid-1] > A[mid] > A[mid+1]: # it is still in dec/asc mode
+                hi = mid - 1
+                print(lo, mid, hi)
+            if lo==hi:
+                return lo
+
+        '''
+        # Better solution (there's also something called golden section search - and applicablehere since it is a mountain array)
+        def peakIndexInMountainArray(self, A):
+            l, r = 0, len(A) - 1
+            while l < r:
+                mid = (l + r) / 2
+                if A[mid] < A[mid + 1]:
+                    l = mid
+                elif A[mid - 1] > A[mid]:
+                    r = mid
+                else:
+                    return mid
+        '''
+        """
+        :type A: List[int]
+        :rtype: int
+        """
+        
