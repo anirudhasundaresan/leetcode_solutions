@@ -20,7 +20,7 @@ What if the inputs contain unicode characters? How would you adapt your solution
 Answer: Sorting
 '''
 
-# 'sorted' can directly take in a string, but you cannot do string.sort() - that's only for a list
+# 'sorted' can directly take in a string (or an iterable, in general), but you cannot do string.sort() - that's only for a list
 
 class Solution:
     def isAnagram(self, s, t):
