@@ -1,0 +1,51 @@
+'''
+253. Meeting Rooms II
+
+Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), find the minimum number of conference rooms required.
+
+Example 1:
+
+Input: [[0, 30],[5, 10],[15, 20]]
+Output: 2
+Example 2:
+
+Input: [[7,10],[2,4]]
+Output: 1
+
+Answer: Logical thinking; greedy algorithm
+- Apparently, can also be done using min-heaps; don't know that DS yet!
+'''
+# Definition for an interval.
+# class Interval:
+#     def __init__(self, s=0, e=0):
+#         self.start = s
+#         self.end = e
+
+class Solution:
+    def minMeetingRooms(self, intervals):
+        ls = []
+        for interval in intervals:
+            ls.append(str(interval.start) + '-s')
+            ls.append(str(interval.end) + '-e')
+        ls.sort(key=lambda x: (int(x.split('-')[0]), x.split('-')[1]))
+        print(ls)
+        ctr, f = 0, 0
+        for l in ls:
+            if l.endswith('s'):
+                ctr += 1
+            else:
+                ctr -= 1
+            f = max(f, ctr)
+        return f
+        """
+        :type intervals: List[Interval]
+        :rtype: int
+        """
+
+''' Better solution 
+R = cnt = 0
+for t, sign in sorted([w for i in intervals for w in [(i.start, 1), (i.end, -1)]]):
+    cnt += sign
+    R = max(R, cnt)
+return R
+'''
