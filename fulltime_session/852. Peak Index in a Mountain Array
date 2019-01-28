@@ -51,7 +51,7 @@ class Solution:
                 return lo
 
         '''
-        # Better solution (there's also something called golden section search - and applicablehere since it is a mountain array)
+        # Better solution (there's also something called golden section search - and applicable here since it is a mountain array)
         def peakIndexInMountainArray(self, A):
             l, r = 0, len(A) - 1
             while l < r:
@@ -67,4 +67,3 @@ class Solution:
         :type A: List[int]
         :rtype: int
         """
-        

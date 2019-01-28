@@ -47,4 +47,43 @@ def rotateString(self, A, B):
     return False
 '''
 
+'''
 # Rolling hash method/ KMP algorithm can give you O(N) space and time
+https://www.youtube.com/watch?v=H4VrKHVG5qI - good explanantion on hash rolling algorithm for substring search
+Sometimes, hashes can be the same between the substring we have and the substring we are looking for; only in those cases should we iterate over elements and search
+Application for Rabin-Karp algorithm - plagiarism checker - compare hashes of different documents
+
+
+class Solution:
+    def rotateString(self, A, B):
+        if len(A) != len(B):
+            return False
+
+        if len(A)==0:
+            return True
+        # Trying this using Rabin-Karp algorithm 2
+        A2 = A + A # now the problem is to find B in A2
+        # get hash of all substrings of len(B)
+
+        prime = 101
+        hashB = sum([ord(r)*prime**(i) for i,r in enumerate(B)])
+        hash_roll = sum([ord(r)*prime**(i) for i,r in enumerate(A)])
+
+        print(B, hashB)
+        i = len(B)
+        for i_ in range(i, len(A2)):
+            x = hash_roll - ord(A2[i_])
+            x = x//prime
+            hash_roll = x + ord(A2[i_])*(prime**(len(B)-1))
+            # print(A2[i_-len(B)+1:i_+1], hash_roll)
+            if hash_roll == hashB:
+                if A2[i_-len(B)+1:i_+1]==B:
+                    return True
+        return False
+
+        """
+        :type A: str
+        :type B: str
+        :rtype: bool
+        """
+'''
