@@ -1,0 +1,51 @@
+'''
+169. Majority Element
+
+Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
+
+You may assume that the array is non-empty and the majority element always exist in the array.
+
+Example 1:
+
+Input: [3,2,3]
+Output: 3
+Example 2:
+
+Input: [2,2,1,1,1,2,2]
+Output: 2
+
+Answer: Boyer-Moore algorithms (I think this works only because n/2 condition); Dynamic Programming; Divide-and-Conquer;
+
+'''
+
+from collections import Counter
+class Solution:
+    def majorityElement(self, nums):
+        # return Counter(nums).most_common()[0][0]
+        # we can also try random.choice of the list and see what comes most? (O(inf) is worst time)
+        '''
+        Another option is to use Boyer-Moore Voting algorithm
+        Time - O(N) and Space - O(1)
+        '''
+        count = 0
+        cand = nums[0]
+        for ind, num in enumerate(nums):
+            if count==0:
+                cand = num
+                count += 1
+            else:
+                if num != cand:
+                    count -= 1
+                else:
+                    count += 1
+        if count==0:
+            return False
+        else: # now check if it is the majority element
+            if nums.count(cand) > len(nums)//2:
+                return cand
+            else:
+                return False
+        """
+        :type nums: List[int]
+        :rtype: int
+        """

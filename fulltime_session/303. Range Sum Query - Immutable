@@ -1,0 +1,44 @@
+'''
+303. Range Sum Query - Immutable
+
+Given an integer array nums, find the sum of the elements between indices i and j (i ≤ j), inclusive.
+
+Example:
+Given nums = [-2, 0, 3, -5, 2, -1]
+
+sumRange(0, 2) -> 1
+sumRange(2, 5) -> -1
+sumRange(0, 5) -> -3
+Note:
+You may assume that the array does not change.
+There are many calls to sumRange function.
+
+Answer: Dynamic Programming; Logic.
+'''
+
+class NumArray:
+
+    def __init__(self, nums):
+        """
+        :type nums: List[int]
+        """
+        self.nums_ = nums
+        self.sum_ = [0]*(len(nums)+1) # to store cumulative sum
+        for ind, num in enumerate(nums):
+            self.sum_[ind+1] = self.sum_[ind] + num
+        print(self.sum_)
+
+    def sumRange(self, i, j):
+        # return sum(self.nums_[i:j+1]) - cannot use this since sumRange will be called many times
+        return self.sum_[j+1] - self.sum_[i]
+        """
+        :type i: int
+        :type j: int
+        :rtype: int
+        """
+
+
+
+# Your NumArray object will be instantiated and called as such:
+# obj = NumArray(nums)
+# param_1 = obj.sumRange(i,j)
