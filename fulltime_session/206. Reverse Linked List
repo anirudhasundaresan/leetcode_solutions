@@ -1,0 +1,63 @@
+'''
+206. Reverse Linked List
+
+Reverse a singly linked list.
+
+Example:
+
+Input: 1->2->3->4->5->NULL
+Output: 5->4->3->2->1->NULL
+Follow up:
+
+A linked list can be reversed either iteratively or recursively. Could you implement both?
+
+Answer: Recursion and Iteration
+
+'''
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution: # Iterative solution
+    def reverseList(self, head):
+        curr_ = head
+        if curr_ is None:
+            return None
+        next_ = curr_.next
+        prev_ = None # check if this needs to be instantiated as a ListNode object - not needed
+        while next_ != None:
+            curr_.next = prev_
+            prev_ = curr_
+            curr_ = next_
+            next_ = next_.next
+        curr_.next = prev_
+        return curr_
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+
+''' Recursive solution - had to look it up - concept is hard to visualize for me
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def reverseList(self, head):
+        if head is None or head.next is None:
+            return head
+        p = self.reverseList(head.next)
+        head.next.next = head
+        head.next = None
+        return p # p has the tail of the linked list in the end; which is the new head on reversing
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+'''

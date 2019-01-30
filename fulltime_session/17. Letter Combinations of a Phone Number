@@ -1,0 +1,64 @@
+'''
+17. Letter Combinations of a Phone Number
+
+Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
+
+A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
+
+Example:
+
+Input: "23"
+Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
+Note:
+
+Although the above answer is in lexicographical order, your answer could be in any order you want.
+
+Answer: itertools.product, list unpacking as a function argument
+
+'''
+
+from collections import defaultdict
+import itertools
+class Solution:
+    def letterCombinations(self, digits):
+        if digits == "":
+            return []
+        dic = {2: ['a', 'b', 'c'], 3: ['d', 'e', 'f'], 4: ['g', 'h', 'i'], 5: ['j', 'k', 'l'], 6: ['m', 'n', 'o'], 7: ['p', 'q', 'r', 's'], 8: ['t', 'u', 'v'], 9: ['w', 'x', 'y', 'z']}
+        ls = [dic[int(digit)] for digit in digits]
+        res = []
+        for r in itertools.product(*ls):
+            res.append(''.join(r))
+        return res
+        """
+        :type digits: str
+        :rtype: List[str]
+        """
+
+''' Shorter version: using list comprehensions
+from collections import defaultdict
+import itertools
+class Solution:
+    def letterCombinations(self, digits):
+        if digits == "":
+            return []
+        dic = {2: ['a', 'b', 'c'], 3: ['d', 'e', 'f'], 4: ['g', 'h', 'i'], 5: ['j', 'k', 'l'], 6: ['m', 'n', 'o'], 7: ['p', 'q', 'r', 's'], 8: ['t', 'u', 'v'], 9: ['w', 'x', 'y', 'z']}
+        return [''.join(r) for r in itertools.product(*list(map(dic.get, map(int, list(digits)))))]
+        """
+        :type digits: str
+        :rtype: List[str]
+        """
+'''
+
+''' Another idea:
+d2a = { '1': '',    '2': 'abc', '3': 'def',
+        '4': 'ghi', '5': 'jkl', '6': 'mno',
+        '7': 'pqrs','8': 'tuv', '9': 'wxyz',
+        '0': ' '}
+
+class Solution(object):
+    def letterCombinations(self, digits):
+        ans = [''] if digits else []
+        for d in digits:
+            ans = [r+e for e in d2a[d] for r in ans]
+        return ans
+'''
