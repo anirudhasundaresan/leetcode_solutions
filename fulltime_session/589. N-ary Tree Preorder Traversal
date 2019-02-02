@@ -1,0 +1,66 @@
+'''
+589. N-ary Tree Preorder Traversal
+
+Given an n-ary tree, return the preorder traversal of its nodes' values.
+
+For example, given a 3-ary tree:
+
+Return its preorder traversal as: [1,3,5,6,2,4].
+
+Note:
+
+Recursive solution is trivial, could you do it iteratively?
+
+Answer: Recursion; make note of how list expands through recursions
+'''
+
+''' Iterative (using stack)
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val, children):
+        self.val = val
+        self.children = children
+"""
+class Solution:
+    def preorder(self, root):
+        if not root:
+            return []
+        stack = [root]
+        ls = []
+        while stack:
+            cur = stack.pop()
+            ls.append(cur.val)
+            stack.extend(reversed(cur.children)) # since it is preorder traversal 
+        return ls
+        """
+        :type root: Node
+        :rtype: List[int]
+        """
+'''
+
+''' Recursive
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val, children):
+        self.val = val
+        self.children = children
+"""
+class Solution:
+    def preorder(self, root):
+        ls = []
+        # preorder - root, left, right
+        if root == None:
+            return []
+        ls.extend([root.val])
+        for child in root.children:
+            ls.extend(self.preorder(child))
+        # self.preorder(root.right)
+        return ls
+        """
+        :type root: Node
+        :rtype: List[int]
+
+        """
+'''

@@ -1,0 +1,63 @@
+'''
+590. N-ary Tree Postorder Traversal
+
+Given an n-ary tree, return the postorder traversal of its nodes' values.
+
+For example, given a 3-ary tree:
+
+Return its postorder traversal as: [5,6,3,2,4,1].
+
+Note:
+
+Recursive solution is trivial, could you do it iteratively?
+
+Answer: Iterative and Recursive solutions
+'''
+
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val, children):
+        self.val = val
+        self.children = children
+"""
+class Solution:
+    def postorder(self, root):
+        # iterative solution
+        stack = [root]
+        ls = []
+        while stack:
+            cur = stack.pop()
+            if cur is not None:
+                ls.append(cur.val)
+                stack.extend(cur.children)
+        return ls[::-1]
+        """
+        :type root: Node
+        :rtype: List[int]
+        """
+
+'''
+""" Recursive solution
+# Definition for a Node.
+class Node:
+    def __init__(self, val, children):
+        self.val = val
+        self.children = children
+"""
+class Solution:
+    def postorder(self, root):
+        # postorder is left-right-root
+        if root == None:
+            return []
+        ls = []
+        for child in root.children:
+            ls.extend(self.postorder(child))
+        ls.append(root.val)
+        return ls
+
+        """
+        :type root: Node
+        :rtype: List[int]
+        """
+'''
