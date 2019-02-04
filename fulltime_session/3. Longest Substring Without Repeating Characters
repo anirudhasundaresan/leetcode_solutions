@@ -1,0 +1,84 @@
+'''
+3. Longest Substring Without Repeating Characters
+
+Given a string, find the length of the longest substring without repeating characters.
+
+Example 1:
+
+Input: "abcabcbb"
+Output: 3
+Explanation: The answer is "abc", with the length of 3.
+Example 2:
+
+Input: "bbbbb"
+Output: 1
+Explanation: The answer is "b", with the length of 1.
+Example 3:
+
+Input: "pwwkew"
+Output: 3
+Explanation: The answer is "wke", with the length of 3.
+             Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
+
+Answer: One pass solution - string
+'''
+
+
+import math # this is better solution with hashmap, instead of hashset - O(N)
+class Solution:
+    def lengthOfLongestSubstring(self, s):
+        if s == '':
+            return 0
+        i, j = 0, 1
+        max_ = -math.inf
+
+        while i < len(s):
+            s_ = dict()
+            s_[s[i]] = i
+            j = i + 1
+            while j < len(s):
+                if s[j] in s_:
+                    break
+                else:
+                    s_[s[j]] = j
+                    j += 1
+                #print(s_)
+            max_ = max(max_, len(s_))
+            if j < len(s):
+                i = 1 + s_[s[j]]
+            else:
+                break
+        return max_
+        """
+        :type s: str
+        :rtype: int
+        """
+
+
+'''
+import math # there is a better method than this (using a hashset) - and that is by using a hashmap. This has O(2N) at worst 
+class Solution:
+    def lengthOfLongestSubstring(self, s):
+        if s == '':
+            return 0
+        i, j = 0, 1
+        max_ = -math.inf
+        while i < len(s):
+            s_ = set()
+            s_.add(s[i])
+            j = i + 1
+            while j < len(s):
+                if s[j] in s_:
+                    break
+                else:
+                    s_.add(s[j])
+                    j += 1
+                #print(s_)
+            max_ = max(max_, len(s_))
+            i += 1
+        return max_
+        """
+        :type s: str
+        :rtype: int
+        """
+'''
