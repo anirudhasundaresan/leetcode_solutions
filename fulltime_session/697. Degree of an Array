@@ -1,0 +1,58 @@
+'''
+697. Degree of an Array
+
+
+Given a non-empty array of non-negative integers nums, the degree of this array is defined as the maximum frequency of any one of its elements.
+
+Your task is to find the smallest possible length of a (contiguous) subarray of nums, that has the same degree as nums.
+
+Example 1:
+Input: [1, 2, 2, 3, 1]
+Output: 2
+Explanation:
+The input array has a degree of 2 because both elements 1 and 2 appear twice.
+Of the subarrays that have the same degree:
+[1, 2, 2, 3, 1], [1, 2, 2, 3], [2, 2, 3, 1], [1, 2, 2], [2, 2, 3], [2, 2]
+The shortest length is 2. So return 2.
+Example 2:
+Input: [1,2,2,3,1,4,2]
+Output: 6
+Note:
+
+nums.length will be between 1 and 50,000.
+nums[i] will be an integer between 0 and 49,999.
+
+Answer: Hashmaps
+'''
+
+from collections import defaultdict
+class Solution:
+    def findShortestSubArray(self, nums):
+        # going to use a dictionary to store indices and then another dictionary to process info - might not be optimal
+        dic = defaultdict(list)
+        dic_ = defaultdict(list)
+
+        for ind, ele in enumerate(nums):
+            dic[ele].append(ind)
+        print(dic)
+
+        max_ = -math.inf
+        for key, val in dic.items():
+            dic_[len(val)].append(key)
+            max_ = max(max_, len(val))
+
+        min_ = math.inf
+        print(dic_)
+
+        print(dic_[max_])
+        for key in dic_[max_]:
+            # print(dic[key][0])
+            min_ = min(min_, dic[key][-1] - dic[key][0])
+
+        return min_+1
+
+
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
