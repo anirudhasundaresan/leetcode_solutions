@@ -1,0 +1,83 @@
+'''
+369. Plus One Linked List
+
+Given a non-negative integer represented as non-empty a singly linked list of digits, plus one to the integer.
+
+You may assume the integer do not contain any leading zero, except the number 0 itself.
+
+The digits are stored such that the most significant digit is at the head of the list.
+
+Example :
+
+Input: [1,2,3]
+Output: [1,2,4]
+
+Answer: LinkedList logic
+'''
+
+# Better solution: Iterative process, rather than reversals - put this down after some days
+
+
+''' - My solution - which reverses, adds and then reverses again.
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution(object):
+    def plusOne(self, head):
+        prev = None
+        curr = head
+        nex = curr.next
+        while curr != None:
+            curr.next = prev
+            prev = curr
+            curr = nex
+            if nex != None:
+                nex = nex.next
+            else:
+                break
+
+        # prev is the head of the reversed linked list
+        ref = prev
+        carry = 0
+        new = prev.val + 1
+        carry = new//10
+        new = new%10
+        prev.val = new
+
+        while carry == 1:
+            if prev.next == None:
+                prev.next = ListNode(1)
+                prev = prev.next
+                break
+            prev = prev.next
+            new = prev.val + carry
+            carry = new//10
+            new = new%10
+            prev.val = new
+
+        # print(prev.val)
+        # return ref
+        # ref is head
+
+        prev = None
+        curr = ref
+        nex = curr.next
+        while curr != None:
+            curr.next = prev
+            prev = curr
+            curr = nex
+            if nex != None:
+                nex = nex.next
+            else:
+                break
+
+        return prev
+
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+'''
