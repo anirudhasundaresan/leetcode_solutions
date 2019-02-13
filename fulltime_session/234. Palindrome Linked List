@@ -1,0 +1,61 @@
+'''
+234. Palindrome Linked List
+
+Given a singly linked list, determine if it is a palindrome.
+
+Example 1:
+
+Input: 1->2
+Output: false
+Example 2:
+
+Input: 1->2->2->1
+Output: true
+Follow up:
+Could you do it in O(n) time and O(1) space?
+
+Answer: Two-pointer
+'''
+
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution(object):
+    def isPalindrome(self, head):
+
+        if head==None or head.next==None:
+            return True
+
+        i, j = head, head
+        prev = None
+        nex = i.next
+        while j!=None and j.next!=None:
+            j = j.next.next
+
+            i.next = prev
+            prev = i
+            i = nex
+            if j!=None and j.next!=None:
+                nex = i.next
+
+        if j==None:
+            k = nex
+        elif j.next==None:
+            k = nex.next
+
+        while prev!=None:
+            if prev.val != k.val:
+                return False
+            prev = prev.next
+            k = k.next
+        return True
+
+
+        """
+        :type head: ListNode
+        :rtype: bool
+        """
+        
