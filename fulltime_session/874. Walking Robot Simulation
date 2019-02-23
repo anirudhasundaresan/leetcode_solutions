@@ -1,0 +1,107 @@
+'''
+874. Walking Robot Simulation
+
+A robot on an infinite grid starts at point (0, 0) and faces north.  The robot can receive one of three possible types of commands:
+
+-2: turn left 90 degrees
+-1: turn right 90 degrees
+1 <= x <= 9: move forward x units
+Some of the grid squares are obstacles.
+
+The i-th obstacle is at grid point (obstacles[i][0], obstacles[i][1])
+
+If the robot would try to move onto them, the robot stays on the previous grid square instead (but still continues following the rest of the route.)
+
+Return the square of the maximum Euclidean distance that the robot will be from the origin.
+
+
+
+Example 1:
+
+Input: commands = [4,-1,3], obstacles = []
+Output: 25
+Explanation: robot will go to (3, 4)
+Example 2:
+
+Input: commands = [4,-1,4,-2,4], obstacles = [[2,4]]
+Output: 65
+Explanation: robot will be stuck at (1, 4) before turning left and going to (1, 8)
+
+
+Note:
+
+0 <= commands.length <= 10000
+0 <= obstacles.length <= 10000
+-30000 <= obstacle[i][0] <= 30000
+-30000 <= obstacle[i][1] <= 30000
+The answer is guaranteed to be less than 2 ^ 31.
+
+Answer: Logic, read question carefully - 'maximum' is being asked. Also, write in Pythonic format.
+'''
+
+''' Better solution - more Pythonic; less cluster
+        dx = 0
+        dy = 1
+        for command in commands:
+            if command == -2:
+                dx,dy = -dy,dx
+            elif command == -1:
+                dx,dy = dy,-dx
+            else:
+                for i in range(command):
+                    if (x+dx,y+dy) in obstructionSet:
+                        break
+                    else:
+                        x += dx
+                        y += dy
+                best = max(best, x*x+y*y)
+
+'''
+
+class Solution(object):
+    def robotSim(self, commands, obstacles):
+        curr  = [0,0]
+        obstacles = set(tuple(x) for x in obstacles)
+        facing_d = {'n': ['w', 'e'], 'e': ['n','s'], 'w' : ['s', 'n'], 's' : ['e', 'w']}
+        face = 'n'
+        dist = []
+        for com in commands:
+            if com > 0:
+                if face=='n':
+                    while com!=0:
+                        curr[1] += 1
+                        com -= 1
+                        if tuple(curr) in obstacles:
+                            curr[1] -= 1
+                            break
+                elif face=='e':
+                    while com!=0:
+                        curr[0] += 1
+                        com -= 1
+                        if tuple(curr) in obstacles:
+                            curr[0] -= 1
+                            break
+                elif face=='w':
+                    while com!=0:
+                        curr[0] -= 1
+                        com -= 1
+                        if tuple(curr) in obstacles:
+                            curr[0] += 1
+                            break
+                else:
+                    while com!=0:
+                        curr[1] -= 1
+                        com -= 1
+                        if tuple(curr) in obstacles:
+                            curr[1] += 1
+                            break
+            else:
+                face = facing_d[face][com]
+            dist.append(curr[0]**2 + curr[1]**2)
+        return max(dist)
+
+        """
+        :type commands: List[int]
+        :type obstacles: List[List[int]]
+        :rtype: int
+        """
