@@ -61,3 +61,20 @@ for i in range(1, len(A)):
         max_global = max_current
 return max_global
 '''
+
+''' # https://stackoverflow.com/questions/15062844/maximum-sum-sublist
+If you want the start and end slice indices, too, you need to track a few more bits of information (note this is still O(1) space and O(n) time, it's just a bit hairier):
+
+def mssl(l):
+    best = cur = 0
+    curi = starti = besti = 0
+    for ind, i in enumerate(l):
+        if cur+i > 0:
+            cur += i
+        else: # reset start position
+            cur, curi = 0, ind+1
+
+        if cur > best:
+            starti, besti, best = curi, ind+1, cur
+    return starti, besti, best
+'''

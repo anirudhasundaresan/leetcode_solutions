@@ -1,0 +1,54 @@
+'''
+102. Binary Tree Level Order Traversal
+
+Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
+
+For example:
+Given binary tree [3,9,20,null,null,15,7],
+    3
+   / \
+  9  20
+    /  \
+   15   7
+return its level order traversal as:
+[
+  [3],
+  [9,20],
+  [15,7]
+]
+
+Answer: Use queues (FIFO) for BFS, and stacks (LIFO) for DFS - all acyclic graph problems.
+'''
+
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution(object):
+    def levelOrder(self, root):
+        if root==None:
+            return []
+        # Queue for BFS
+        queue = []
+        res_ = [] # for storing results
+        queue.append(root)
+        while queue:
+            x = len(queue)
+            res = []
+            for i in range(x):
+                y = queue.pop(0)
+                res.append(y.val)
+                if y.left!=None:
+                    queue.append(y.left)
+                if y.right!=None:
+                    queue.append(y.right)
+            res_.append(res)
+        return res_
+
+        """
+        :type root: TreeNode
+        :rtype: List[List[int]]
+        """

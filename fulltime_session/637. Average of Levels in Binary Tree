@@ -1,0 +1,50 @@
+'''
+637. Average of Levels in Binary Tree
+
+Given a non-empty binary tree, return the average value of the nodes on each level in the form of an array.
+Example 1:
+Input:
+    3
+   / \
+  9  20
+    /  \
+   15   7
+Output: [3, 14.5, 11]
+Explanation:
+The average value of nodes on level 0 is 3,  on level 1 is 14.5, and on level 2 is 11. Hence return [3, 14.5, 11].
+Note:
+The range of node's value is in the range of 32-bit signed integer.
+
+Answer: BFS; Queue
+'''
+
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution(object):
+    def averageOfLevels(self, root):
+        if root==None:
+            return []
+        # Queue for BFS
+        queue = []
+        res_ = [] # for storing results
+        queue.append(root)
+        while queue:
+            x = len(queue)
+            res_.append(float(sum(j.val for j in queue)/x))
+            for i in range(x):
+                y = queue.pop(0)
+                if y.left!=None:
+                    queue.append(y.left)
+                if y.right!=None:
+                    queue.append(y.right)
+        return res_
+
+        """
+        :type root: TreeNode
+        :rtype: List[List[int]]
+        """

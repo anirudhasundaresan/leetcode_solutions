@@ -1,0 +1,54 @@
+'''
+429. N-ary Tree Level Order Traversal
+
+Given an n-ary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
+
+For example, given a 3-ary tree:
+
+We should return its level order traversal:
+
+[
+     [1],
+     [3,2,4],
+     [5,6]
+]
+
+Note:
+
+The depth of the tree is at most 1000.
+The total number of nodes is at most 5000.
+
+Answer: Same as in the binary tree case; use BFS-queue logic
+'''
+
+"""
+# Definition for a Node.
+class Node(object):
+    def __init__(self, val, children):
+        self.val = val
+        self.children = children
+"""
+from collections import deque
+class Solution(object):
+    def levelOrder(self, root):
+        if root==None:
+            return []
+        queue = deque()
+        queue.append(root)
+        res_ = []
+        while queue:
+            res = []
+            l = len(queue)
+            for i in range(l):
+                x = queue.popleft()
+                res.append(x.val)
+                for i in x.children:
+                    if i!=None:
+                        queue.append(i)
+            res_.append(res)
+        return res_
+        """
+        :type root: Node
+        :rtype: List[List[int]]
+        """
+        
